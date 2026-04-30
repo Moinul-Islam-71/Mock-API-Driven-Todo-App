@@ -102,6 +102,7 @@ btn_refresh.addEventListener("click", (e) => {
 
 
                 const title = task.title;
+                const description = task.description;
                 const id = task.id;
                 const isDone = task.completed;
 
@@ -133,9 +134,9 @@ btn_refresh.addEventListener("click", (e) => {
                     </span>
                 </div>
 
-                <h2 class="card-title text-slate-100 text-lg">Fix Navigation Bug</h2>
+                <h2 class="card-title text-slate-100 text-lg">${title}</h2>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    ${title}
+                    ${description}
                 </p>
 
                 <div class="card-actions rounded-full justify-end my-4 mb-8 pt-4 border-t border-white/5">
