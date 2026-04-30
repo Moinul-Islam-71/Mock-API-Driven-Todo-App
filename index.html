@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-black/90 relative min-h-screen">
+
+    <nav class="fixed z-50 top-0 w-full backdrop-blur-2xl px-4 md:px-12 py-3 border-b border-b-slate-50/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
+
+            <!-- Logo Section -->
+            <div class="flex items-center gap-2 shrink-0">
+                <div
+                    class="bg-linear-to-br from-[#62c0a6] to-[#36b095] flex justify-center items-center w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl">
+                    <svg class="w-5 h-5 md:w-6 md:h-6 text-slate-800" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="text-sm md:text-xl font-semibold text-slate-50 leading-tight">TodoMaster</h1>
+                </div>
+            </div>
+
+            <!-- Stats Section (Force Single Line on Mobile) -->
+            <div class="flex items-center gap-1.5 md:gap-4 overflow-x-hidden">
+                <!-- Total -->
+                <div class="bg-white/5 border border-white/10 px-2 md:px-4 py-1 rounded-md text-center">
+                    <h4 class="text-[8px] md:text-xs text-slate-50/50 uppercase font-bold">Total</h4>
+                    <p id="total_tasks" class="text-xs md:text-base text-amber-200/70 font-mono font-bold">0</p>
+                </div>
+                <!-- Done -->
+                <div class="bg-white/5 border border-white/10 px-2 md:px-4 py-1 rounded-md text-center">
+                    <h4 class="text-[8px] md:text-xs text-slate-50/50 uppercase font-bold">Done</h4>
+                    <p id="completed_tasks" class="text-xs md:text-base text-green-400/80 font-mono font-bold">0</p>
+                </div>
+                <!-- Wait -->
+                <div class="bg-white/5 border border-white/10 px-2 md:px-4 py-1 rounded-md text-center">
+                    <h4 class="text-[8px] md:text-xs text-slate-50/50 uppercase font-bold">Pending</h4>
+                    <p id="pending_tasks" class="text-xs md:text-base text-rose-400/80 font-mono font-bold">0</p>
+                </div>
+            </div>
+
+            <!-- Desktop Load Data Button -->
+            <div class="shrink-0">
+                <button id="btn_loadTodos"
+                    class="hidden md:block btn btn-sm btn-success border-none text-slate-900 font-bold">
+                    Load Data
+                </button>
+                <!-- Mobile Icon Button (Optional) -->
+                <button id="btn_refresh" class="md:hidden p-2 text-green-400 hover:bg-white/5 rounded-full">
+                    <i class="fa-solid fa-rotate text-sm"></i>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+    <div id="todos_container"
+        class="max-w-7xl mx-auto px-12 py-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+    </div>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
